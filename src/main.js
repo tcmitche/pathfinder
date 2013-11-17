@@ -29,23 +29,24 @@ var sheetModel = function() {
         });
     }
 
-    var skills = (function() {
-        var skillsArr = [];
-        for(var i = 0, length = SKILLS.length; i < length; i++) {
-            var s = SKILLS[i];
-            skillsArr.push(
-                skill(
-                    s.name,
-                    getModByAbility(s.relAbility),
-                    s.canUseUntrained,
-                    s.armorPenalty));
-        }
-        return skillsArr;
-    })();
+    var saveSheet = function() {
+        var sheetData = {};
+
+    };
+
+    var skills = _.map(SKILLS, function(s) {
+        return skill(
+            s.name,
+            getModByAbility(s.relAbility),
+            s.canUseUntrained,
+            s.armorPenalty
+        )
+    });
 
     return {
         abilities: abilities,
-        skills: skills
+        skills: skills,
+        saveSheet: saveSheet
     }
 }
 ko.applyBindings(sheetModel());
