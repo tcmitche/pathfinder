@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pathfinder Character Sheet</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="build/pathfinder-character-sheet.css">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Ability</th>
+                <th>Total</th>
+                <th>Mod</th>
+                <th>Base</th>
+                <th>Enhance</th>
+                <th>Misc</th>
+                <th>Temp</th>
+            </tr>
+            <tbody data-bind="foreach: abilities">
+                <tr>
+                    <td><label data-bind="text: code"></label></td>
+                    <td><input type="number" data-bind="value: score"></td>
+                    <td><input type="number" data-bind="value: modifier"></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <label>Strength</label>
+        <input type="number" data-bind="value: abilities.STR.score">
+        <label>Modifier</label>
+        <input type="number" data-bind="value: getModifier('STR')"> -->
+        <script src="build/pathfinder-character-sheet.js"></script>
+    </body>
+</html>
