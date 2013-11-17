@@ -6,28 +6,30 @@
         <link rel="stylesheet" href="build/pathfinder-character-sheet.css">
     </head>
     <body>
-        <table>
-            <tr>
-                <th>Ability</th>
-                <th>Total</th>
-                <th>Mod</th>
-                <th>Base</th>
-                <th>Enhance</th>
-                <th>Misc</th>
-                <th>Temp</th>
-            </tr>
+        <table class="abilities">
+            <thead>
+                <tr>
+                    <th>Ability</th>
+                    <th>Total</th>
+                    <th>Modifier</th>
+                    <th>Base</th>
+                    <th>Enhance</th>
+                    <th>Misc</th>
+                    <th>Temporary</th>
+                </tr>
+            </thead>
             <tbody data-bind="foreach: abilities">
                 <tr>
-                    <td><label data-bind="text: code"></label></td>
-                    <td><input type="number" data-bind="value: score"></td>
-                    <td><input type="number" data-bind="value: modifier"></td>
+                    <th><label data-bind="text: code"></label></th>
+                    <td data-bind="text: score"></td>
+                    <td data-bind="text: modifier"></td>
+                    <td><input type="number" data-bind="value: base"></td>
+                    <td><input type="number" data-bind="value: enhance"></td>
+                    <td><input type="number" data-bind="value: temp"></td>
+                    <td><input type="number" data-bind="value: misc"></td>
                 </tr>
             </tbody>
         </table>
-        <!-- <label>Strength</label>
-        <input type="number" data-bind="value: abilities.STR.score">
-        <label>Modifier</label>
-        <input type="number" data-bind="value: getModifier('STR')"> -->
         <script src="build/pathfinder-character-sheet.js"></script>
     </body>
 </html>
