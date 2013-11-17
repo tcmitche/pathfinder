@@ -37,6 +37,23 @@ var ability = function(code, base, enhance, misc, temp) {
         return Math.floor((score() - 10) / 2);
     });
 
+    var save = function() {
+        return {
+            code: code,
+            base: base(),
+            enhance: enhance(),
+            misc: misc(),
+            temp: temp()
+        };
+    };
+
+    var load = function(saved) {
+        base(saved.base);
+        enhance(saved.enhance);
+        misc(saved.misc);
+        temp(saved.temp);
+    }
+
     return {
         name: friendlyName(code),
         code: code,
@@ -46,6 +63,8 @@ var ability = function(code, base, enhance, misc, temp) {
         temp: temp,
         modifier: modifier,
         score: score,
+        save: save,
+        load: load
     }
 }
 

@@ -29,24 +29,47 @@ var sheetModel = function() {
         });
     }
 
-    var saveSheet = function() {
-        var sheetData = {};
-
-    };
-
     var skills = _.map(SKILLS, function(s) {
         return skill(
             s.name,
-            getModByAbility(s.relAbility),
             s.canUseUntrained,
-            s.armorPenalty
+            s.armorPenalty,
+            getModByAbility(s.relAbility)
         )
     });
+
+    var saveSheet = function() {
+        var sheetData = {
+            abilities: _.map(abilities, function(ability) { return ability.save(); }),
+            skills: _.map(skills, function(skill) { return skill.save(); })
+        }
+        localStorage.characterSheetData = JSON.stringify(sheetData);
+    };
+
+    var loadSheet = function() {
+        var sheetData = localStorage.characterSheetData;
+        if (sheetData) {
+            sheetData = JSON.parse(sheetData);
+        } else {
+            return;
+        }
+        _.each(sheetData.abilities, function(ability) {
+            _.find(abilities, function(a) {
+                return a.code === ability.code;
+            }).load(ability);
+        });
+        _.each(sheetData.skills, function(skill) {
+            _.find(skills, function(s) {
+                return s.name === skill.name;
+            }).load(skill);
+        });
+    }
 
     return {
         abilities: abilities,
         skills: skills,
-        saveSheet: saveSheet
+        saveSheet: saveSheet,
+        loadSheet: loadSheet
     }
 }
 ko.applyBindings(sheetModel());
