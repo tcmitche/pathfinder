@@ -4,17 +4,14 @@
 var ko = require("knockout");
 
 var ability = function(name, code) {
-    var base = ko.observable(0);
-    var enhance = ko.observable(0);
-    var misc = ko.observable(0);
-    var temp = ko.observable(0);
+    var base = ko.observable(0).extend({ integer: null });
+    var enhance = ko.observable(0).extend({ integer: null });
+    var misc = ko.observable(0).extend({ integer: null });
+    var temp = ko.observable(0).extend({ integer: null });
 
     // todo: extend for ints
     var score = ko.computed(function() {
-        return parseInt(base(), 10) +
-            parseInt(enhance(), 10) +
-            parseInt(misc(), 10) +
-            parseInt(temp(), 10);
+        return base() + enhance() + misc() + temp();
     });
 
     var modifier = ko.computed(function() {

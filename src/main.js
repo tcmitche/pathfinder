@@ -2,7 +2,9 @@
  * Main file
  */
 var ko = require("knockout");
+require("./ko-extenders");
 var _ = require("underscore");
+
 var ability = require("./ability");
 var skill = require("./skill");
 

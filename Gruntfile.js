@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         },
         watch: {
             dev: {
-                files: ["src/**/*.js", "assets/**/*"],
+                files: ["src/**/*.js", "assets/**/*", "data/**/*"],
                 tasks: ["default"]
             }
         },

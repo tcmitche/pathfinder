@@ -70,52 +70,52 @@
         "canUseUntrained": true,
         "relAbility": "CHA"
     }, {
-        "name": "Knowledge (arcana)",
+        "name": "Kn: Arcana",
         "classMap": [0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
         "canUseUntrained": false,
         "relAbility": "INT"
     }, {
-        "name": "Knowledge (dungeoneering)",
+        "name": "Kn: Dungeoneering",
         "classMap": [0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1],
         "canUseUntrained": false,
         "relAbility": "INT"
     }, {
-        "name": "Knowledge (engineering)",
+        "name": "Kn: Engineering",
         "classMap": [0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1],
         "canUseUntrained": false,
         "relAbility": "INT"
     }, {
-        "name": "Knowledge (geography)",
+        "name": "Kn: Geography",
         "classMap": [0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1],
         "canUseUntrained": false,
         "relAbility": "INT"
     }, {
-        "name": "Knowledge (history)",
+        "name": "Kn: History",
         "classMap": [0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1],
         "canUseUntrained": false,
         "relAbility": "INT"
     }, {
-        "name": "Knowledge (local)",
+        "name": "Kn: Local",
         "classMap": [0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1],
         "canUseUntrained": false,
         "relAbility": "INT"
     }, {
-        "name": "Knowledge (nature)",
+        "name": "Kn: Nature",
         "classMap": [1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1],
         "canUseUntrained": false,
         "relAbility": "INT"
     }, {
-        "name": "Knowledge (nobility)",
+        "name": "Kn: Nobility",
         "classMap": [0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1],
         "canUseUntrained": false,
         "relAbility": "INT"
     }, {
-        "name": "Knowledge (planes)",
+        "name": "Kn: Planes",
         "classMap": [0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
         "canUseUntrained": false,
         "relAbility": "INT"
     }, {
-        "name": "Knowledge (religion)",
+        "name": "Kn: Religion",
         "classMap": [0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1],
         "canUseUntrained": false,
         "relAbility": "INT"
