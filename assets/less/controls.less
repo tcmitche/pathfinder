@@ -1,1 +1,48 @@
-// controls.less
+.controls {
+    background: @darkPaperColor;
+    color: white;
+    margin-bottom: 1em;
+    border: 1px solid fade(black, 20%);
+
+    button {
+        background: transparent;
+        border: none;
+        font-weight: bold;
+        color: white;
+
+        padding: 10px 30px;
+        margin: 0px;
+
+        &:hover {
+            background: fade(white, 30%);
+        }
+    }
+}
+
+input[type=number] {
+    width: 3em;
+    text-align: right;
+    padding: 4px;
+
+    background: transparent;
+    border: 0px;
+
+    padding-right: 0.50em;
+}
+
+button:focus,
+input:focus {
+    outline: none;
+}
+
+.boxShadowBorder(@size; @color) {
+    box-shadow: 0px 0px 0px @size @color;
+}
+
+input:hover {
+    .boxShadowBorder(4px; fade(@focusColor, 40%));
+}
+
+input:focus {
+    .boxShadowBorder(4px; fade(@focusColor, 80%));
+}
