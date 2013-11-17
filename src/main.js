@@ -19,15 +19,6 @@ var sheetModel = function() {
         ability("Charisma", "CHA")
     ];
 
-    var skills = (function() {
-        var skillsArr = [];
-        for(var i = 0, length = SKILLS.length; i < length; i++) {
-            var current = SKILLS[i];
-            skillsArr.push(skill(current.name, current.relAbility));
-        }
-        return skillsArr;
-    })();
-
     var getModByAbility = function(ability) {
         return ko.computed(function() {
             return _.find(abilities, function(a) {
@@ -36,10 +27,18 @@ var sheetModel = function() {
         });
     }
 
+    var skills = (function() {
+        var skillsArr = [];
+        for(var i = 0, length = SKILLS.length; i < length; i++) {
+            var current = SKILLS[i];
+            skillsArr.push(skill(current.name, getModByAbility(current.relAbility), current.canUseUntrained));
+        }
+        return skillsArr;
+    })();
+
     return {
         abilities: abilities,
-        skills: skills,
-        getModByAbility: getModByAbility
+        skills: skills
     }
 }
 ko.applyBindings(sheetModel());

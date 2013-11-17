@@ -36,10 +36,22 @@
         <div class="section skills">
             <h2>Skills</h2>
             <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Skill</th>
+                        <th>Total</th>
+                        <th>Rank</th>
+                        <th>Ability</th>
+                    </tr>
+                </thead>
                 <tbody data-bind="foreach: skills">
                     <tr>
-                        <td data-bind="text: name"></td>
-                        <td data-bind="text: $root.getModByAbility($data.ability)"></td>
+                        <td><input type="checkbox" data-bind="checked: classSkill"></td>
+                        <td class="left-align" data-bind="text: name, css: { untrained: canBeUntrained }"></td>
+                        <td data-bind="text: total"></td>
+                        <td><input type="number" data-bind="value: rank"></td>
+                        <td data-bind="text: ability"></td>
                     </tr>
                 </tbody>
             </table>
