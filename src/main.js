@@ -13,12 +13,12 @@ var SKILLS = require("../data/skills.json");
 var sheetModel = function() {
     // need a way to get scores by type
     var abilities = [
-        ability("Strength", "STR"),
-        ability("Dexterity", "DEX"),
-        ability("Constitution", "CON"),
-        ability("Intelligence", "INT"),
-        ability("Wisdom", "WIS"),
-        ability("Charisma", "CHA")
+        ability("STR", 9),
+        ability("DEX", 14),
+        ability("CON", 9),
+        ability("INT", 12),
+        ability("WIS", 10),
+        ability("CHA", 11)
     ];
 
     var getModByAbility = function(ability) {
@@ -32,8 +32,13 @@ var sheetModel = function() {
     var skills = (function() {
         var skillsArr = [];
         for(var i = 0, length = SKILLS.length; i < length; i++) {
-            var current = SKILLS[i];
-            skillsArr.push(skill(current.name, getModByAbility(current.relAbility), current.canUseUntrained, current.armorPenalty));
+            var s = SKILLS[i];
+            skillsArr.push(
+                skill(
+                    s.name,
+                    getModByAbility(s.relAbility),
+                    s.canUseUntrained,
+                    s.armorPenalty));
         }
         return skillsArr;
     })();
