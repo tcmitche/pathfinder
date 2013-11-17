@@ -31,7 +31,7 @@ var sheetModel = function() {
         var skillsArr = [];
         for(var i = 0, length = SKILLS.length; i < length; i++) {
             var current = SKILLS[i];
-            skillsArr.push(skill(current.name, getModByAbility(current.relAbility), current.canUseUntrained));
+            skillsArr.push(skill(current.name, getModByAbility(current.relAbility), current.canUseUntrained, current.armorPenalty));
         }
         return skillsArr;
     })();

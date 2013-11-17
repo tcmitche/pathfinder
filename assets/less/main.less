@@ -33,9 +33,15 @@
 }
 
 .skills {
-    td.untrained {
-        background-color: #98FB98;
-        border-radius: 2px;
+    td {
+        &.untrained {
+            border: 2px solid #98FB98;
+            background-color: #98FB98;
+            border-radius: 2px;
+        }
+        &.armorPenalty {
+            border: 2px dashed #FF8C00;
+        }
     }
 }
 

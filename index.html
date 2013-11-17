@@ -48,7 +48,7 @@
                 <tbody data-bind="foreach: skills">
                     <tr>
                         <td><input type="checkbox" data-bind="checked: classSkill"></td>
-                        <td class="left-align" data-bind="text: name, css: { untrained: canBeUntrained }"></td>
+                        <td class="left-align" data-bind="text: name, css: { untrained: canBeUntrained, armorPenalty: armorCheckPenalty }"></td>
                         <td data-bind="text: total"></td>
                         <td><input type="number" data-bind="value: rank"></td>
                         <td data-bind="text: ability"></td>
