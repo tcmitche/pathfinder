@@ -10,6 +10,12 @@
             <button class="save" data-bind="click: saveSheet">Save</button>
             <button class="load" data-bind="click: loadSheet">Load</button>
         </div>
+        <div class="section">
+            <label>Race</label>
+            <select data-bind="foreach: races">
+                <option data-bind="value: name, text: name"></option>
+            </select>
+        </div>
         <div class="section abilities">
             <h2>Ability Scores</h2>
             <table>

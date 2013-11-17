@@ -9,6 +9,7 @@ var ability = require("./ability");
 var skill = require("./skill");
 
 var SKILLS = require("../data/skills.json");
+var races = require("../data/races.json");
 
 var sheetModel = function() {
     // need a way to get scores by type
@@ -68,6 +69,7 @@ var sheetModel = function() {
     return {
         abilities: abilities,
         skills: skills,
+        races: races,
         saveSheet: saveSheet,
         loadSheet: loadSheet
     }

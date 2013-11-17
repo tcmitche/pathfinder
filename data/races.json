@@ -1,0 +1,53 @@
+[
+    {
+        "name": "Dwarf",
+        "abilityMod": {
+            "CON": 2,
+            "WIS": 2,
+            "CHA": -2
+        },
+        "speed": 20,
+    }, {
+        "name": "Elf",
+        "abilityMod": {
+            "DEX": 2,
+            "INT": 2,
+            "CON": -2
+        },
+        "speed": 30
+    }, {
+        "name": "Gnome",
+        "abilityMod": {
+            "CON": 2,
+            "CHA": 2,
+            "STR": -2
+        },
+        "speed": 20
+    }, {
+        "name": "Half-Elf",
+        "abilityMod": {
+            "ANY": 2
+        },
+        "speed": 30
+    }, {
+        "name": "Half-Orc",
+        "abilityMod": {
+            "ANY": 2,
+        },
+        "speed": 30
+    }, {
+        "name": "Halfling",
+        "abilityMod": {
+            "DEX": 2,
+            "CHA": 2,
+            "STR": -2
+        },
+        "speed": 20
+    }, {
+        "name": "Human",
+        "abilityMod": {
+            "ANY": 2,
+        },
+        "speed": 30
+    },
+]
