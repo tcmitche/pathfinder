@@ -1,0 +1,187 @@
+[
+    {
+        "name": "Acrobatics",
+        "classMap": [1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0],
+        "canUseUntrained": true,
+        "relAbility": "DEX",
+        "armorPenalty": true
+    }, {
+        "name": "Appraise",
+        "classMap": [0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1],
+        "canUseUntrained": true,
+        "relAbility": "INT"
+    }, {
+        "name": "Bluff",
+        "classMap": [0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+        "canUseUntrained": true,
+        "relAbility": "CHA"
+    }, {
+        "name": "Climb",
+        "classMap": [1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0],
+        "canUseUntrained": true,
+        "relAbility": "STR",
+        "armorPenalty": true
+    }, {
+        "name": "Craft",
+        "classMap": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        "canUseUntrained": true,
+        "relAbility": "INT"
+    }, {
+        "name": "Diplomacy",
+        "classMap": [0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0],
+        "canUseUntrained": true,
+        "relAbility": "CHA"
+    }, {
+        "name": "Disable Device",
+        "classMap": [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+        "canUseUntrained": false,
+        "relAbility": "DEX",
+        "armorPenalty": true
+    }, {
+        "name": "Disguise",
+        "classMap": [0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+        "canUseUntrained": true,
+        "relAbility": "CHA"
+    }, {
+        "name": "Escape Artist",
+        "classMap": [0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0],
+        "canUseUntrained": true,
+        "relAbility": "DEX",
+        "armorPenalty": true
+    }, {
+        "name": "Fly",
+        "classMap": [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1],
+        "canUseUntrained": true,
+        "relAbility": "DEX",
+        "armorPenalty": true
+    }, {
+        "name": "Handle Animal",
+        "classMap": [1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0],
+        "canUseUntrained": false,
+        "relAbility": "CHA"
+    }, {
+        "name": "Heal",
+        "classMap": [0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0],
+        "canUseUntrained": true,
+        "relAbility": "WIS"
+    }, {
+        "name": "Intimidate",
+        "classMap": [1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0],
+        "canUseUntrained": true,
+        "relAbility": "CHA"
+    }, {
+        "name": "Knowledge (arcana)",
+        "classMap": [0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
+        "canUseUntrained": false,
+        "relAbility": "INT"
+    }, {
+        "name": "Knowledge (dungeoneering)",
+        "classMap": [0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1],
+        "canUseUntrained": false,
+        "relAbility": "INT"
+    }, {
+        "name": "Knowledge (engineering)",
+        "classMap": [0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1],
+        "canUseUntrained": false,
+        "relAbility": "INT"
+    }, {
+        "name": "Knowledge (geography)",
+        "classMap": [0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1],
+        "canUseUntrained": false,
+        "relAbility": "INT"
+    }, {
+        "name": "Knowledge (history)",
+        "classMap": [0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1],
+        "canUseUntrained": false,
+        "relAbility": "INT"
+    }, {
+        "name": "Knowledge (local)",
+        "classMap": [0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+        "canUseUntrained": false,
+        "relAbility": "INT"
+    }, {
+        "name": "Knowledge (nature)",
+        "classMap": [1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1],
+        "canUseUntrained": false,
+        "relAbility": "INT"
+    }, {
+        "name": "Knowledge (nobility)",
+        "classMap": [0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1],
+        "canUseUntrained": false,
+        "relAbility": "INT"
+    }, {
+        "name": "Knowledge (planes)",
+        "classMap": [0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
+        "canUseUntrained": false,
+        "relAbility": "INT"
+    }, {
+        "name": "Knowledge (religion)",
+        "classMap": [0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1],
+        "canUseUntrained": false,
+        "relAbility": "INT"
+    }, {
+        "name": "Linguistics",
+        "classMap": [0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1],
+        "canUseUntrained": false,
+        "relAbility": "INT"
+    }, {
+        "name": "Perception",
+        "classMap": [1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0],
+        "canUseUntrained": true,
+        "relAbility": "WIS"
+    }, {
+        "name": "Perform",
+        "classMap": [0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0],
+        "canUseUntrained": true,
+        "relAbility": "CHA"
+    }, {
+        "name": "Profession",
+        "classMap": [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        "canUseUntrained": false,
+        "relAbility": "WIS"
+    }, {
+        "name": "Ride",
+        "classMap": [1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
+        "canUseUntrained": true,
+        "relAbility": "DEX",
+        "armorPenalty": true
+    }, {
+        "name": "Sense Motive",
+        "classMap": [0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0],
+        "canUseUntrained": true,
+        "relAbility": "WIS"
+    }, {
+        "name": "Sleight of Hand",
+        "classMap": [0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+        "canUseUntrained": false,
+        "relAbility": "DEX",
+        "armorPenalty": true
+    }, {
+        "name": "Spellcraft",
+        "classMap": [0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1],
+        "canUseUntrained": false,
+        "relAbility": "INT"
+    }, {
+        "name": "Stealth",
+        "classMap": [0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0],
+        "canUseUntrained": true,
+        "relAbility": "DEX",
+        "armorPenalty": true
+    }, {
+        "name": "Survival",
+        "classMap": [1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0],
+        "canUseUntrained": true,
+        "relAbility": "WIS"
+    }, {
+        "name": "Swim",
+        "classMap": [1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0],
+        "canUseUntrained": true,
+        "relAbility": "STR",
+        "armorPenalty": true
+    }, {
+        "name": "Use Magic Device",
+        "classMap": [0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+        "canUseUntrained": false,
+        "relAbility": "CHA"
+    }
+]

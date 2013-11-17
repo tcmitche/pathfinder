@@ -6,30 +6,44 @@
         <link rel="stylesheet" href="build/pathfinder-character-sheet.css">
     </head>
     <body>
-        <table class="abilities">
-            <thead>
-                <tr>
-                    <th>Ability</th>
-                    <th>Total</th>
-                    <th>Modifier</th>
-                    <th>Base</th>
-                    <th>Enhance</th>
-                    <th>Misc</th>
-                    <th>Temporary</th>
-                </tr>
-            </thead>
-            <tbody data-bind="foreach: abilities">
-                <tr>
-                    <th><label data-bind="text: code"></label></th>
-                    <td data-bind="text: score"></td>
-                    <td data-bind="text: modifier"></td>
-                    <td><input type="number" data-bind="value: base"></td>
-                    <td><input type="number" data-bind="value: enhance"></td>
-                    <td><input type="number" data-bind="value: temp"></td>
-                    <td><input type="number" data-bind="value: misc"></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="section abilities">
+            <h2>Ability Scores</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ability</th>
+                        <th>Total</th>
+                        <th>Modifier</th>
+                        <th>Base</th>
+                        <th>Enhance</th>
+                        <th>Misc</th>
+                        <th>Temporary</th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: abilities">
+                    <tr>
+                        <th><label data-bind="text: code, attr: { title: name }"></label></th>
+                        <td data-bind="text: score"></td>
+                        <td data-bind="text: modifier"></td>
+                        <td><input type="number" data-bind="value: base"></td>
+                        <td><input type="number" data-bind="value: enhance"></td>
+                        <td><input type="number" data-bind="value: temp"></td>
+                        <td><input type="number" data-bind="value: misc"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="section skills">
+            <h2>Skills</h2>
+            <table>
+                <tbody data-bind="foreach: skills">
+                    <tr>
+                        <td data-bind="text: name"></td>
+                        <td data-bind="text: $root.getModByAbility($data.ability)"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <script src="build/pathfinder-character-sheet.js"></script>
     </body>
 </html>
