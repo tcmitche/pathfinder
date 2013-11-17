@@ -1,11 +1,32 @@
-// Main.less
+@import "colors";
 @import "controls";
+
+html {
+    font-family: sans-serif;
+    background: @paperColor;
+    color: @textColor;
+
+    text-align: center;
+}
+
+body {
+    display: inline-block;
+    text-align: left;
+
+    max-width: 800px;
+}
+
 .section {
-    border: 2px #ccc solid;
-    border-radius: 6px;
-    padding: 10px;
-    display: table;
+    display: block;
+    border: 1px fade(@darkPaperColor, 40%) solid;
+    background: fade(white, 60%);
+    padding: 12px;
     margin: 0 0 8px;
+
+    h2,
+    th {
+        color: @headerColor;
+    }
 
     h2 {
         margin: 0px 3px 10px;
@@ -14,40 +35,60 @@
         font-size: 70%;
     }
     th, td {
-        padding: 3px 6px;
+        padding: 0px 6px;
         text-align: center;
         min-width: 3em;
+    }
+    td.input {
+        padding: 0px;
+        margin:  0px;
+    }
+    td.input > input,
+    td.input > label {
+        padding: 10px;
+        display: block;
+        height: 100%;
+    }
+    td,
+    td.input input {
+        font-size: 18px;
+    }
+    tr:nth-child(even) {
+        background: fade(@darkPaperColor, 15%);
+    }
+    tbody th, td {
+        border: 1px solid fade(black, 10%);
+    }
+    td.number {
+        text-align: right !important;
     }
     .left-align {
         text-align: left;
     }
 }
 
-.abilities {
-    border-spacing: 2px;
+table {
+    border-spacing: 5px;
+}
 
+.abilities {
     tbody th {
-        background-color: #000;
+        background-color: fade(@darkPaperColor, 80%);
         color: #fff;
-        font-family: sans-serif;
-        border-radius: 2px;
     }
 }
 
 .skills {
     td {
         &.untrained {
-            border: 2px solid #98FB98;
-            background-color: #98FB98;
-            border-radius: 2px;
+            border-widh: 2px !important;
+            // border: 2px solid transparent;
+            background-color: @untrainedColor;
+            // border-radius: 2px;
         }
         &.armorPenalty {
-            border: 2px dashed #FF8C00;
+            // border: 1px dashed @armorPenaltyColor;
+            box-shadow: inset -6px 0px 0px 0px @armorPenaltyColor;
         }
     }
-}
-
-input[type=number] {
-    width: 40px;
-    text-align: center;
 }

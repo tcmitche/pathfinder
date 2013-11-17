@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Pathfinder Character Sheet</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="build/pathfinder-character-sheet.css">
@@ -33,12 +34,12 @@
                 <tbody data-bind="foreach: abilities">
                     <tr>
                         <th><label data-bind="text: code, attr: { title: name }"></label></th>
-                        <td data-bind="text: score"></td>
-                        <td data-bind="text: modifier"></td>
-                        <td><input type="number" data-bind="value: base"></td>
-                        <td><input type="number" data-bind="value: enhance"></td>
-                        <td><input type="number" data-bind="value: temp"></td>
-                        <td><input type="number" data-bind="value: misc"></td>
+                        <td class="number" data-bind="text: score"></td>
+                        <td class="number" data-bind="text: modifier"></td>
+                        <td class="input"><input type="number" data-bind="value: base"></td>
+                        <td class="input"><input type="number" data-bind="value: enhance"></td>
+                        <td class="input"><input type="number" data-bind="value: temp"></td>
+                        <td class="input"><input type="number" data-bind="value: misc"></td>
                     </tr>
                 </tbody>
             </table>
@@ -59,13 +60,13 @@
                 </thead>
                 <tbody data-bind="foreach: skills">
                     <tr>
-                        <td><input type="checkbox" data-bind="checked: classSkill"></td>
+                        <td class="input"><label><input type="checkbox" data-bind="checked: classSkill"></label></td>
                         <td class="left-align" data-bind="text: name, css: { untrained: canBeUntrained, armorPenalty: armorCheckPenalty }"></td>
-                        <td data-bind="text: total"></td>
-                        <td><input type="number" data-bind="value: rank"></td>
-                        <td data-bind="text: abilityMod"></td>
-                        <td><input type="number" data-bind="value: racial"></td>
-                        <td><input type="number" data-bind="value: misc"></td>
+                        <td class="number" data-bind="text: total"></td>
+                        <td class="input"><input type="number" data-bind="value: rank"></td>
+                        <td class="number" data-bind="text: abilityMod"></td>
+                        <td class="input"><input type="number" data-bind="value: racial"></td>
+                        <td class="input"><input type="number" data-bind="value: misc"></td>
                     </tr>
                 </tbody>
             </table>

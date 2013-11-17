@@ -11,7 +11,11 @@ module.exports = function(grunt) {
         watch: {
             dev: {
                 files: ["src/**/*.js", "assets/**/*", "data/**/*"],
-                tasks: ["default"]
+                tasks: ["clear", "default"]
+            },
+            less: {
+                files: ["assets/**/*"],
+                tasks: ["clear", "less:dev"]
             }
         },
         less: {
@@ -26,6 +30,8 @@ module.exports = function(grunt) {
         },
         clean: ["build/"]
     });
+
+    grunt.loadTasks('tasks');
 
     grunt.loadNpmTasks("grunt-browserify");
     grunt.loadNpmTasks("grunt-contrib-less");
