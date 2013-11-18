@@ -74,4 +74,12 @@ var sheetModel = function() {
         loadSheet: loadSheet
     }
 }
+
 ko.applyBindings(sheetModel());
+
+// Select all text in inputs when clicking them.
+document.body.addEventListener("click", function(event) {
+    if (event.target.nodeName === "INPUT") {
+        event.target.select();
+    };
+}, false);
