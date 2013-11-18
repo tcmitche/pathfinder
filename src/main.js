@@ -12,14 +12,26 @@ var SKILLS = require("../data/skills.json");
 var races = require("../data/races.json");
 
 var sheetModel = function() {
-    // need a way to get scores by type
+    var selectedRace = ko.observable();
+    var selectedRaceMod = ko.computed({
+        read: function() {
+            if (!selectedRace()) { return {}; }
+            return _.find(races, function(race) {
+                return race.name === selectedRace();
+            }).abilityMod;
+        },
+        write: function(value) {
+            selectedRace(value);
+        }
+    });
+
     var abilities = [
-        ability("STR", 9),
-        ability("DEX", 14),
-        ability("CON", 9),
-        ability("INT", 12),
-        ability("WIS", 10),
-        ability("CHA", 11)
+        ability("STR", 9, selectedRaceMod),
+        ability("DEX", 14, selectedRaceMod),
+        ability("CON", 9, selectedRaceMod),
+        ability("INT", 12, selectedRaceMod),
+        ability("WIS", 10, selectedRaceMod),
+        ability("CHA", 11, selectedRaceMod)
     ];
 
     var getModByAbility = function(ability) {
@@ -70,6 +82,7 @@ var sheetModel = function() {
         abilities: abilities,
         skills: skills,
         races: races,
+        selectedRace: selectedRace,
         saveSheet: saveSheet,
         loadSheet: loadSheet
     }

@@ -13,8 +13,7 @@
         </div>
         <div class="section">
             <label>Race</label>
-            <select data-bind="foreach: races">
-                <option data-bind="value: name, text: name"></option>
+            <select data-bind="options: races, optionsText: 'name', optionsValue: 'name', value: selectedRace, optionsCaption: 'Choose a race'">
             </select>
         </div>
         <div class="section abilities">
@@ -26,6 +25,7 @@
                         <th>Total</th>
                         <th>Modifier</th>
                         <th>Base</th>
+                        <th>Racial</th>
                         <th>Enhance</th>
                         <th>Misc</th>
                         <th>Temporary</th>
@@ -37,6 +37,7 @@
                         <td class="number" data-bind="text: score"></td>
                         <td class="number" data-bind="text: modifier"></td>
                         <td class="input"><input type="number" data-bind="value: base"></td>
+                        <td class="number" data-bind="text: racial"></td>
                         <td class="input"><input type="number" data-bind="value: enhance"></td>
                         <td class="input"><input type="number" data-bind="value: temp"></td>
                         <td class="input"><input type="number" data-bind="value: misc"></td>
