@@ -1,0 +1,93 @@
+[
+    {
+        "name": "Fine",
+        "sizeMod": 8,
+        "grappleMod": -16,
+        "hideMod": 16,
+        "heightRange": "6 in. or less",
+        "weightRange": "1/8 lb. or less ",
+        "space": "½ ft.",
+        "natReachTall": "0 ft.",
+        "natReachLong": "0 ft."
+    }, {
+        "name": "Diminutive",
+        "sizeMod": 4,
+        "grappleMod": -12,
+        "hideMod": 12,
+        "heightRange": "6 in. - 1 ft.",
+        "weightRange": "1/8 lb. - 1 lb.",
+        "space": "1 ft.",
+        "natReachTall": "0 ft.",
+        "natReachLong": "0 ft."
+    }, {
+        "name": "Tiny",
+        "sizeMod": 2,
+        "grappleMod": -8,
+        "hideMod": 8,
+        "heightRange": "1 ft. - 2 ft.",
+        "weightRange": "1 lb. - 8 lb.",
+        "space": "2½ ft.",
+        "natReachTall": "0 ft.",
+        "natReachLong": "0 ft."
+    }, {
+        "name": "Small",
+        "sizeMod": 1,
+        "grappleMod": -4,
+        "hideMod": 4,
+        "heightRange": "2 ft. - 4 ft.",
+        "weightRange": "8 lb. - 60 lb.",
+        "space": "5 ft.",
+        "natReachTall": "5 ft.",
+        "natReachLong": "5 ft."
+    }, {
+        "name": "Medium",
+        "sizeMod": 0,
+        "grappleMod": 0,
+        "hideMod": 0,
+        "heightRange": "4 ft. - 8 ft.",
+        "weightRange": "60 lb. - 500 lb.",
+        "space": "5 ft.",
+        "natReachTall": "5 ft.",
+        "natReachLong": "5 ft."
+    }, {
+        "name": "Large",
+        "sizeMod": -1,
+        "grappleMod": 4,
+        "hideMod": -4,
+        "heightRange": "8 ft. - 16 ft.",
+        "weightRange": "500 lb. - 2 tons",
+        "space": "10 ft.",
+        "natReachTall": "10 ft.",
+        "natReachLong": "5 ft."
+    }, {
+        "name": "Huge",
+        "sizeMod": -2,
+        "grappleMod": 8,
+        "hideMod": -8,
+        "heightRange": "16 ft. - 32 ft.",
+        "weightRange": "2 tons - 16 tons",
+        "space": "15 ft.",
+        "natReachTall": "15 ft.",
+        "natReachLong": "10 ft."
+    }, {
+        "name": "Gargantuan",
+        "sizeMod": -4,
+        "grappleMod": 12,
+        "hideMod": -12,
+        "heightRange": "32 ft. - 64 ft.",
+        "weightRange": "16 tons - 125 tons",
+        "space": "20 ft.",
+        "natReachTall": "20 ft.",
+        "natReachLong": "15 ft."
+    }, {
+        "name": "Colossal",
+        "sizeMod": -8,
+        "grappleMod": 16,
+        "hideMod": -16,
+        "heightRange": "64 ft. or more",
+        "weightRange": "125 tons or more",
+        "space": "30 ft.",
+        "natReachTall": "30 ft.",
+        "natReachLong": "20 ft."
+    }
+]

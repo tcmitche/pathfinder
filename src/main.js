@@ -7,32 +7,18 @@ var _ = require("underscore");
 
 var ability = require("./ability");
 var skill = require("./skill");
+var characterInfo = require("./character-info");
 
 var SKILLS = require("../data/skills.json");
-var RACES = require("../data/races.json");
-var CLASSES = require("../data/classes.json");
 
 var sheetModel = function() {
-    var selectedRace = ko.observable();
-    var selectedRaceMod = ko.computed({
-        read: function() {
-            if (!selectedRace()) { return {}; }
-            return _.find(RACES, function(race) {
-                return race.name === selectedRace();
-            }).abilityMod;
-        },
-        write: function(value) {
-            selectedRace(value);
-        }
-    });
-
     var abilities = [
-        ability("STR", 9, selectedRaceMod),
-        ability("DEX", 14, selectedRaceMod),
-        ability("CON", 9, selectedRaceMod),
-        ability("INT", 12, selectedRaceMod),
-        ability("WIS", 10, selectedRaceMod),
-        ability("CHA", 11, selectedRaceMod)
+        ability("STR", 9, characterInfo.selectedRaceMod),
+        ability("DEX", 14, characterInfo.selectedRaceMod),
+        ability("CON", 9, characterInfo.selectedRaceMod),
+        ability("INT", 12, characterInfo.selectedRaceMod),
+        ability("WIS", 10, characterInfo.selectedRaceMod),
+        ability("CHA", 11, characterInfo.selectedRaceMod)
     ];
 
     var getModByAbility = function(ability) {
@@ -52,15 +38,13 @@ var sheetModel = function() {
         )
     });
 
-    var selectedClass = ko.observable();
-    var selectedClassIndex = ko.computed(function() {
-        if (!selectedClass()) { return ""; }
-        for (var classIndex = 0; classIndex < CLASSES.length; classIndex++) {
-            if (CLASSES[classIndex].name === selectedClass()) {
+    characterInfo.selectedClass.subscribe(function() {
+        if (!characterInfo.selectedClass()) { return ""; }
+        for (var classIndex = 0; classIndex < characterInfo.classes.length; classIndex++) {
+            if (characterInfo.classes[classIndex].name === characterInfo.selectedClass()) {
                 break;
             }
         }
-        console.log(classIndex)
         _.each(SKILLS, function(elem, index) {
             if (elem.classMap[classIndex] === true) {
                 skills[index].classSkill(true);
@@ -100,10 +84,7 @@ var sheetModel = function() {
     return {
         abilities: abilities,
         skills: skills,
-        races: RACES,
-        classes: CLASSES,
-        selectedRace: selectedRace,
-        selectedClass: selectedClass,
+        characterInfo: characterInfo,
         saveSheet: saveSheet,
         loadSheet: loadSheet
     }
