@@ -9,6 +9,11 @@ var CLASSES = require("../data/classes.json");
 var SIZES = require("../data/sizes.json");
 
 function characterInfo() {
+    var alignments = [
+        "Lawful Good", "Neutral Good", "Chaotic Good",
+        "Lawful Neutral", "True Neutral", "Chaotic Neutral",
+        "Lawful Evil", "Neutral Evil", "Chaotic Neutral"
+    ];
     /**
      * The character name
      */
@@ -26,7 +31,7 @@ function characterInfo() {
     var age = ko.observable(0);
     var alignment = ko.observable("");// Should display the alignment grid
     var deity = ko.observable("");
-    var backgroundInfo = ko.observable("");
+    var background = ko.observable("");
 
     var languages = ko.observable("");
 
@@ -49,6 +54,7 @@ function characterInfo() {
         races: RACES,
         classes: CLASSES, // This should eventually be moved into the classes viewModel
         sizes: SIZES,
+        alignments: alignments,
         character: character,
         player: player,
         size: size,
@@ -58,7 +64,7 @@ function characterInfo() {
         age: age,
         alignment: alignment,
         deity: deity,
-        backgroundInfo: backgroundInfo,
+        background: background,
         languages: languages,
         selectedClass: selectedClass,
         selectedRace: selectedRace,

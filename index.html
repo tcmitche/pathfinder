@@ -33,6 +33,15 @@
             <label>Weight</label>
             <input type="text" size="6" data-bind="value: weight">
             <br>
+            <label>Age</label>
+            <input type="text" size="3" data-bind="value: age">
+            <label>Alignment</label>
+            <select data-bind="options: alignments, value: alignment"></select>
+            <label>Deity</label>
+            <input type="text" data-bind="value: deity">
+            <label>Background Occupation</label>
+            <input type="text" data-bind="value: background">
+            <br>
             <label>Class</label>
             <select data-bind="options: classes, optionsText: 'name', optionsValue: 'name', value: selectedClass, optionsCaption: 'Choose a class'"></select>
         </div>
