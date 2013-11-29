@@ -1,6 +1,9 @@
 {
   "name": "pathfinder-character-sheet",
   "version": "0.0.1",
+  "dependencies": {
+    "lesshat": "git+https://github.com/csshat/lesshat/#v2.0.10"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "browserify": "~2.35.2",

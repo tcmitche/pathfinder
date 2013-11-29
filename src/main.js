@@ -56,6 +56,7 @@ var sheetModel = function() {
 
     var saveSheet = function() {
         var sheetData = {
+            characterInfo: characterInfo.save(),
             abilities: _.map(abilities, function(ability) { return ability.save(); }),
             skills: _.map(skills, function(skill) { return skill.save(); })
         }
@@ -69,6 +70,7 @@ var sheetModel = function() {
         } else {
             return;
         }
+        characterInfo.load(sheetData.characterInfo);
         _.each(sheetData.abilities, function(ability) {
             _.find(abilities, function(a) {
                 return a.code === ability.code;

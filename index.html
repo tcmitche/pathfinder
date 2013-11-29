@@ -11,37 +11,41 @@
             <button class="save" data-bind="click: saveSheet">Save</button>
             <button class="load" data-bind="click: loadSheet">Load</button>
         </div>
-        <div class="section" data-bind="with: characterInfo">
-            <label>Character Name</label>
-            <input type="text" data-bind="value: character">
-            <label>Player Name</label>
-            <input type="text" data-bind="value: player">
-            <br>
-            <label>Race</label>
-            <select data-bind="options: races, optionsText: 'name', optionsValue: 'name', value: selectedRace, optionsCaption: 'Choose a race'">
-            </select>
-            <label>Size</label>
-            <select type="text" data-bind="options: sizes, optionsText: 'name', optionsValue: 'name', optionsCaption: 'Choose a size', value: size">
-            <label>Gender</label>
-            <select data-bind="value: gender">
-                <option value="">Choose</option>
-                <option value="female">Female</option>
-                <option value="male">Male</option>
-            </select>
-            <label>Height</label>
-            <input type="text" size="6" data-bind="value: height">
-            <label>Weight</label>
-            <input type="text" size="6" data-bind="value: weight">
-            <br>
-            <label>Age</label>
-            <input type="text" size="3" data-bind="value: age">
-            <label>Alignment</label>
-            <select data-bind="options: alignments, value: alignment"></select>
-            <label>Deity</label>
-            <input type="text" data-bind="value: deity">
-            <label>Background Occupation</label>
-            <input type="text" data-bind="value: background">
-            <br>
+        <div id="character-info" class="section" data-bind="with: characterInfo">
+            <h2>Character Info</h2>
+            <div class="row">
+                <label>Character Name</label>
+                <input type="text" size="45" data-bind="value: character">
+                <label>Player Name</label>
+                <input type="text" size="45" data-bind="value: player">
+            </div>
+            <div class="row">
+                <label>Race</label>
+                <select data-bind="options: races, optionsText: 'name', optionsValue: 'name', value: selectedRace, optionsCaption: 'Choose a race'">
+                </select>
+                <label>Size</label>
+                <select type="text" data-bind="options: sizes, optionsText: 'name', optionsValue: 'name', optionsCaption: 'Choose a size', value: size"></select>
+                <label>Gender</label>
+                <select data-bind="value: gender">
+                    <option value="">Choose</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                </select>
+                <label>Height</label>
+                <input type="text" size="6" data-bind="value: height">
+                <label>Weight</label>
+                <input type="text" size="6" data-bind="value: weight">
+            </div>
+            <div class="row">
+                <label>Age</label>
+                <input type="text" size="3" data-bind="value: age">
+                <label>Alignment</label>
+                <select data-bind="options: alignments, value: alignment"></select>
+                <label>Deity</label>
+                <input type="text" data-bind="value: deity">
+                <label>Background Occupation</label>
+                <input type="text" data-bind="value: background">
+            </div>
             <label>Class</label>
             <select data-bind="options: classes, optionsText: 'name', optionsValue: 'name', value: selectedClass, optionsCaption: 'Choose a class'"></select>
         </div>

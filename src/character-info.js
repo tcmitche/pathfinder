@@ -49,6 +49,39 @@ function characterInfo() {
         }
     });
 
+    var save = function() {
+        return {
+            character: character(),
+            player: player(),
+            size: size(),
+            gender: gender(),
+            height: height(),
+            weight: weight(),
+            age: age(),
+            alignment: alignment(),
+            deity: deity(),
+            background: background(),
+            languages: languages(),
+            selectedClass: selectedClass(),
+            selectedRace: selectedRace()
+        }
+    }
+
+    var load = function(data) {
+        character(data.character);
+        player(data.player);
+        size(data.size);
+        gender(data.gender);
+        height(data.height);
+        weight(data.weight);
+        age(data.age);
+        alignment(data.alignment);
+        deity(data.deity);
+        background(data.background);
+        languages(data.languages);
+        selectedClass(data.selectedClass);
+        selectedRace(data.selectedRace);
+    }
 
     return {
         races: RACES,
@@ -68,7 +101,9 @@ function characterInfo() {
         languages: languages,
         selectedClass: selectedClass,
         selectedRace: selectedRace,
-        selectedRaceMod: selectedRaceMod
+        selectedRaceMod: selectedRaceMod,
+        save: save,
+        load: load
     }
 }
 
